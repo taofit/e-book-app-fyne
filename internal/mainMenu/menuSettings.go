@@ -1,7 +1,6 @@
 package mainMenu
 
 import (
-	"fmt"
 	"github.com/taofit/e-book-fyne/internal/themes"
 
 	"fyne.io/fyne/v2"
@@ -23,14 +22,6 @@ func MakeMenu() *fyne.MainMenu {
 	}
 	themeMenu := fyne.NewMenu("主题", themeMenuItems...)
 
-	mainDirectoryMenuItems := []*fyne.MenuItem{
-		fyne.NewMenuItem("回总目录",
-			func() {
-				fmt.Println("going back to main directory")
-			}),
-	}
-	mainDirectory := fyne.NewMenu("目录", mainDirectoryMenuItems...)
-
 	fontSizeMenuItems := []*fyne.MenuItem{
 		fyne.NewMenuItem("A-", func() {
 			hzDefaultTheme.SetFontSize(-1)
@@ -48,7 +39,6 @@ func MakeMenu() *fyne.MainMenu {
 	fontSize := fyne.NewMenu("字体大小", fontSizeMenuItems...)
 	main := fyne.NewMainMenu(
 		themeMenu,
-		mainDirectory,
 		fontSize,
 	)
 

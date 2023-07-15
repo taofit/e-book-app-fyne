@@ -7,7 +7,7 @@ import (
 	"fyne.io/fyne/v2/widget"
 )
 
-const preferenceCurrentArticle = "currentArticle"
+const PreferenceCurrentArticle = "currentArticle"
 
 type NavSectionList struct {
 	list *widget.List
@@ -68,7 +68,7 @@ func (section *NavSectionList) MakeNav(
 				setSubList(listTitle, list)
 			} else {
 				if a, ok := articles.Articles[subjectName]; ok {
-					curApp.Preferences().SetInt(preferenceCurrentArticle, id)
+					curApp.Preferences().SetInt(PreferenceCurrentArticle, id)
 					setArticle(a)
 				}
 			}
@@ -76,7 +76,7 @@ func (section *NavSectionList) MakeNav(
 	}
 
 	if loadPrevious {
-		currentPref := curApp.Preferences().IntWithFallback(preferenceCurrentArticle, 0)
+		currentPref := curApp.Preferences().IntWithFallback(PreferenceCurrentArticle, 0)
 		section.list.Select(currentPref)
 	}
 	return section.list
@@ -112,7 +112,7 @@ func (section *NavSectionList) generateSubList(
 				setSubList(listTitle, list)
 			} else {
 				if a, ok := articles.Articles[subjectName]; ok {
-					curApp.Preferences().SetString(preferenceCurrentArticle, subjectName)
+					curApp.Preferences().SetString(PreferenceCurrentArticle, subjectName)
 					setArticle(a)
 				}
 			}

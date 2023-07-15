@@ -1,9 +1,12 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/taofit/e-book-fyne/internal/articles"
 	"github.com/taofit/e-book-fyne/internal/mainMenu"
 	"github.com/taofit/e-book-fyne/internal/navList"
+	"github.com/taofit/e-book-fyne/internal/search"
 	"github.com/taofit/e-book-fyne/internal/themes"
 
 	"fyne.io/fyne/v2"
@@ -67,18 +70,38 @@ func main() {
 		content.Refresh()
 	}
 
+	setSearchResult := func(resultCnt fyne.CanvasObject, input string) {
+		searchTitle := fmt.Sprintf("search \" %s \" result", input)
+		if fyne.CurrentDevice().IsMobile() {
+			child := hzApp.NewWindow(searchTitle)
+			topWindow = child
+			child.SetContent(resultCnt)
+			child.Show()
+			child.SetOnClosed(func() {
+				topWindow = w
+			})
+			return
+		}
+		title.SetText(searchTitle)
+
+		content.Objects = []fyne.CanvasObject{resultCnt}
+		content.Refresh()
+	}
+
 	article := container.NewBorder(
 		container.NewVBox(title, widget.NewSeparator()), nil, nil, nil, content)
 
+	searchSection := search.MakeSearchEntry(setSearchResult, setArticle)
 	if fyne.CurrentDevice().IsMobile() {
 		topBar := makeTopBar(appTitle)
 		navSection := navSection.MakeNav(setArticle, setSubList, false)
-		content := container.NewBorder(topBar, nil, nil, nil, navSection)
+		content := container.NewBorder(topBar, searchSection, nil, nil, navSection)
 		w.SetContent(content)
 	} else {
 		split := container.NewHSplit(navSection.MakeNav(setArticle, setSubList, true), article)
 		split.Offset = 0.2
-		w.SetContent(split)
+		content := container.NewBorder(nil, searchSection, nil, nil, split)
+		w.SetContent(content)
 	}
 
 	w.Resize(fyne.Size{Width: 500, Height: 500})

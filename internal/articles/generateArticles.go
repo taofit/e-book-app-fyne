@@ -111,12 +111,15 @@ func (subject Subject) hasChildren() bool {
 }
 
 func (a Article) LoadFile(_ fyne.Window) fyne.CanvasObject {
+	return generateText(a.GetFileContent())
+}
+
+func (a Article) GetFileContent() string {
 	input, err := articlesFolder.ReadFile(a.FilePath)
 	if err != nil {
-		return generateText("")
+		return ""
 	}
-
-	return generateText(string(input))
+	return string(input)
 }
 
 func generateText(content string) fyne.CanvasObject {
