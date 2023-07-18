@@ -39,7 +39,7 @@ func (t *TappableLabel) Tapped(pe *fyne.PointEvent) {
 }
 
 func (section *NavSectionList) MakeNav(
-	setArticle func(article articles.Article),
+	setArticleWithPag func(article articles.Article, id int, articlesForSubject *[]string),
 	setSubList func(listTitle string, list fyne.CanvasObject),
 	loadPrevious bool,
 ) fyne.CanvasObject {
@@ -50,7 +50,7 @@ func (section *NavSectionList) MakeNav(
 			return len(articles.ArticleIndex["rootSubjects"])
 		},
 		CreateItem: func() fyne.CanvasObject {
-			return NewTappableLabel(section, "master articles")
+			return NewTappableLabel(section, "single articles")
 		},
 		UpdateItem: func(id widget.ListItemID, item fyne.CanvasObject) {
 			subjectName := articles.ArticleIndex["rootSubjects"][id]
@@ -64,12 +64,12 @@ func (section *NavSectionList) MakeNav(
 			articlesForSubject, ok := articles.ArticleIndex[subjectName]
 			if ok {
 				subNavSection := NavSectionList{}
-				list := subNavSection.generateSubList(setArticle, setSubList, articlesForSubject)
+				list := subNavSection.generateSubList(setArticleWithPag, setSubList, articlesForSubject)				
 				setSubList(listTitle, list)
 			} else {
 				if a, ok := articles.Articles[subjectName]; ok {
 					curApp.Preferences().SetInt(PreferenceCurrentArticle, id)
-					setArticle(a)
+					setArticleWithPag(a, id, &[]string{})
 				}
 			}
 		},
@@ -83,7 +83,7 @@ func (section *NavSectionList) MakeNav(
 }
 
 func (section *NavSectionList) generateSubList(
-	setArticle func(article articles.Article),
+	setArticleWithPag func(article articles.Article, id int, articlesForSubject *[]string),
 	setSubList func(listTitle string, list fyne.CanvasObject),
 	articlesForSubject []string,
 ) fyne.CanvasObject {
@@ -94,7 +94,7 @@ func (section *NavSectionList) generateSubList(
 			return len(articlesForSubject)
 		},
 		CreateItem: func() fyne.CanvasObject {
-			return NewTappableLabel(section, "master article")
+			return NewTappableLabel(section, "single article")
 		},
 		UpdateItem: func(id widget.ListItemID, item fyne.CanvasObject) {
 			subjectName := articlesForSubject[id]
@@ -105,15 +105,15 @@ func (section *NavSectionList) generateSubList(
 		OnSelected: func(id widget.ListItemID) {
 			subjectName := articlesForSubject[id]
 			listTitle := articles.Articles[subjectName].Title
-			articlesForSubject, ok := articles.ArticleIndex[subjectName]
+			aclsForSubject, ok := articles.ArticleIndex[subjectName]
 			if ok {
 				subNavSection := NavSectionList{}
-				list := subNavSection.generateSubList(setArticle, setSubList, articlesForSubject)
+				list := subNavSection.generateSubList(setArticleWithPag, setSubList, aclsForSubject)
 				setSubList(listTitle, list)
 			} else {
 				if a, ok := articles.Articles[subjectName]; ok {
 					curApp.Preferences().SetString(PreferenceCurrentArticle, subjectName)
-					setArticle(a)
+					setArticleWithPag(a, id, &articlesForSubject)
 				}
 			}
 		},

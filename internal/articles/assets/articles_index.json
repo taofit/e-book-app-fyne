@@ -1,331 +1,149 @@
 [
     {
-        "key": "biography",
-        "title": "法尊传记"
+        "key": "forward",
+        "title": "forward"
     },
     {
-        "key": "chronology",
-        "title": "重要纪事",
+        "key": "book1",
+        "title": "The Shadow out of Time",
         "tableOfContents": [
             {
-                "key": "chronology_along_the_mahayana_path",
-                "title": "梵行之路"
+                "key": "book1_1",
+                "title": "Chapter 1"
             },
             {
-                "key": "chronology_holy_blood_lotus",
-                "title": "血骨莲花"
+                "key": "book1_2",
+                "title": "Chapter 2"
             },
             {
-                "key": "chronology_promote_the_orthodox_of_dharma_1",
-                "title": "弘扬正法 1"
+                "key": "book1_3",
+                "title": "Chapter 3"
             },
             {
-                "key": "chronology_promote_the_orthodox_of_dharma_2",
-                "title": "弘扬正法 2"
+                "key": "book1_4",
+                "title": "Chapter 4"
             },
             {
-                "key": "chronology_the_overwhelming_genius_of_youth",
-                "title": "少年峥嵘"
+                "key": "book1_5",
+                "title": "Chapter 5"
+            },
+            {
+                "key": "book1_6",
+                "title": "Chapter 6"
+            },
+            {
+                "key": "book1_7",
+                "title": "Chapter 7"
+            },
+            {
+                "key": "book1_8",
+                "title": "Chapter 8"
             }
         ]
     },
     {
-        "key":"heart_reflection",
-        "title": "论心",
+        "key": "book2",
+        "title": "THE WAY TO LovE",
         "tableOfContents": [
             {
-                "key":"heart_reflection_text",
-                "title": "论心"
+                "key":"book2_1",
+                "title": "Introduction"
             },
             {
-                "key": "heart_reflection_connotation",
-                "title": "<<论心>> 之内涵"
-            }
-        ]
-    },
-    {
-        "key": "zen_chapter",
-        "title": "宗门品",
-        "tableOfContents": [
-            {
-                "key": "zen_chapter_origin",
-                "title": "缘起",
-                "tableOfContents": [
-                    {
-                        "key": "zen_chapter_origin1",
-                        "title": "缘起 1"
-                    },
-                    {
-                        "key": "zen_chapter_origin2",
-                        "title": "缘起 2"
-                    }
-                ]
+                "key":"book2_2",
+                "title": "Profit and Loss"
             },
             {
-                "key": "zen_chapter_zen",
-                "title": "禅宗"
+                "key":"book2_3",
+                "title": "Discipleship"
             },
             {
-                "key": "zen_chapter_cao_dong",
-                "title": "曹洞宗"
+                "key":"book2_4",
+                "title": "The Extra Mile"
             },
             {
-                "key": "zen_chapter_5_yun_chen_1",
-                "title": "五位君臣 (一)"
+                "key":"book2_5",
+                "title": "He Went Away Sad"
             },
             {
-                "key": "zen_chapter_5_yun_chen_2",
-                "title": "五位君臣 (二)"
+                "key":"book2_6",
+                "title": "The Eye of a Needle"
             },
             {
-                "key": "zen_chapter_5_yun_chen_3",
-                "title": "五位君臣 (三)"
+                "key":"book2_7",
+                "title": "Nowhere to Go"
             },
             {
-                "key": "zen_chapter_tantra",
-                "title": "密 宗"
+                "key":"book2_8",
+                "title": "BRING tN THE PooR"
             },
             {
-                "key": "zen_chapter_with_without_form_3_tantra",
-                "title": "有相三密与无相三密"
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key": "zen_chapter_concentration_tantra_zen",
-                "title": "定、密、禅"
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key": "zen_chapter_practice_precepts",
-                "title": "修持戒律"
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key": "zen_chapter_yu_barrier",
-                "title": "浴 关"
-            }
-        ]
-    },
-    {
-        "key": "blog",
-        "title": "博客",
-        "tableOfContents": [
-            {
-                "key": "blog-my-statements-and-confessions",
-                "title": "我的陈述和告白"
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key": "blog-master-instruction-7-1",
-                "title": "毗卢行武示 甲午年七月初一日"
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key": "blog-master-instruction-2012-06-02_1",
-                "title": "如何修行安般念到入禅(密之入禅那) 1"
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key": "blog-master-instruction-2012-06-02_2",
-                "title": "如何修行安般念到入禅(密之入禅那) 2"
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key": "blog-master-instruction-2012-06-02_3",
-                "title": "如何修行安般念到入禅(密之入禅那) 3"
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key": "blog-master-instruction-2013-08-06",
-                "title": "人的思维产生于大脑吗(2013-08-06)"
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key": "blog-news-kick-open-the-door",
-                "title": "连“送快递”都懒得说了，直接踹门了！"
-            }
-        ]
-    },
-    {
-        "key": "awakening_dharma_culture",
-        "title": "觉学文化",
-        "tableOfContents":[
-            {
-                "key": "huzang_dharma_culture",
-                "title": "华藏文化",
-                "tableOfContents":[
-                    {
-                        "key":"huzang_dharma_culture_huazang_culture_life_science",
-                        "title": "华藏文化与生命科学"
-                    },
-                    {
-                        "key":"huzang_dharma_culture_unify_into_one_heart",
-                        "title": "四方上下无非一心"
-                    },
-                    {
-                        "key":"huzang_dharma_culture_overlap_space_time",
-                        "title":"时空的重叠性"
-                    },
-                    {
-                        "key": "huzang_dharma_culture_buddha_and_living_being_save",
-                        "title": "佛度众生与众生度佛"
-                    },
-                    {
-                        "key": "huzang_dharma_culture_fulfil_with_equality_purity_compassion",
-                        "title": "平等、清净、慈悲三心具足"
-                    },
-                    {
-                        "key": "huzang_dharma_culture_report_hz_dhr_life_sic_1",
-                        "title": "生命科学与华藏心法报告 1"
-                    },
-                    {
-                        "key": "huzang_dharma_culture_report_hz_dhr_life_sic_2",
-                        "title": "生命科学与华藏心法报告 2"
-                    }
-                ]
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key": "awakening_dharma_buddhist_teaching",
-                "title": "佛学讲座",
-                "tableOfContents": [
-                    {
-                        "key":"awakening_dharma_buddhist_teaching_martial_arts_zen",
-                        "title": "习武与禅修"
-                    },
-                    {
-                        "key":"awakening_dharma_buddhist_teaching_no_buddha_no_evil",
-                        "title": "无佛可求；无魔可斩"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "key": "heart_lamp_online",
-        "title": "心灯在线",
-        "tableOfContents":[
-            {
-                "key":"qq_heart_lamp",
-                "title":"QQ心灯",
-                "tableOfContents":[
-                    {
-                        "key":"qq_heart_lamp_2011-01-29-07-04-10",
-                        "title":"2011-01-29晨—卖萝卜"
-                    },
-                    {
-                        "key":"qq_heart_lamp_2011-01-31-15-46-12",
-                        "title":"2011-01-30(农历腊月廿七)晚—备年货"
-                    },
-                    {
-                        "key":"qq_heart_lamp_2011-01-31-13-49-31",
-                        "title":"2011-01-30晚—济善与辟谷"
-                    }
-                ]
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key":"heart_lamp_question_answer",
-                "title":"心灯答疑",
-                "tableOfContents":[
-                    {
-                        "key":"heart_lamp_question_answer_2014-03-29_2014-04-12-2014-04-19",
-                        "title": "2014年3月29日、4月12日、4月19日——心灯在线答疑(心灯在线答疑小组)"
-                    },
-                    {
-                        "key":"heart_lamp_question_answer_2014-01-11_2014-01-18_2014-01-25",
-                        "title": "2014年1月11日、1月18日、1月25日——心灯在线答疑(心灯在线答疑小组)"
-                    },
-                    {
-                        "key": "heart_lamp_question_answer_2014-01-04",
-                        "title": "2014-01-04 ——心灯在线"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "key":"on_virtues_harmony",
-        "title": "和之德",
-        "tableOfContents": [
-            {
-                "key":"on_virtues_harmony_1",
-                "title":"和之德 1"
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key":"on_virtues_harmony_2",
-                "title":"和之德 2"
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key":"on_virtues_harmony_3",
-                "title":"和之德 3"
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key":"on_virtues_harmony_4",
-                "title":"和之德 4"
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key":"on_virtues_harmony_5",
-                "title":"和之德 5"
+                "key":"book2_1",
+                "title": ""
             },
             {
-                "key":"on_virtues_harmony_6",
-                "title":"和之德 6"
-            },
-            {
-                "key":"on_virtues_harmony_7",
-                "title":"和之德 7"
-            },
-            {
-                "key":"on_virtues_harmony_8",
-                "title":"和之德 8"
-            },
-            {
-                "key":"on_virtues_harmony_9",
-                "title":"和之德 9"
-            },
-            {
-                "key":"on_virtues_harmony_10",
-                "title":"和之德 10"
-            },
-            {
-                "key":"on_virtues_harmony_11",
-                "title":"和之德 11"
-            },
-            {
-                "key":"on_virtues_harmony_12",
-                "title":"和之德 12"
-            }
-        ]
-    },
-    {
-        "key": "yuan_jue_sutra",
-        "title": "圆觉经",
-        "tableOfContents": [
-            {
-                "title": "文殊師利",
-                "key": "yuan_jue_sutra_manjusri_bodhisattva"
-            },
-            {
-                "title": "普贤菩萨",
-                "key": "yuan_jue_sutra_samantabhadra_bodhisattva"
-            },
-            {
-                "title": "普眼菩萨",
-                "key": "yuan_jue_sutra_universal_vision_bodhisattva"
-            },
-            {
-                "title": "金刚藏菩萨",
-                "key": "yuan_jue_sutra_vajragarbha_bodhisattva"
-            },
-            {
-                "title": "弥勒菩萨",
-                "key": "yuan_jue_sutra_maitreya_bodhisattva"
-            },
-            {
-                "title": "淸净慧菩萨",
-                "key": "yuan_jue_sutra_pure_wisdom_bodhisattva"
-            },
-            {
-                "title": "威德自在菩萨",
-                "key": "yuan_jue_sutra_power_and_virtue_unhindered_bodhisattva"
-            },
-            {
-                "title": "辩音菩萨",
-                "key": "yuan_jue_sutra_voice_of_discernment_bodhisattva"
-            },
-            {
-                "title": "净诸业障菩萨",
-                "key": "yuan_jue_sutra_purify_karmic_hindrances_bodhisattva"
+                "key":"book2_1",
+                "title": ""
             }
         ]
     }

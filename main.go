@@ -6,6 +6,7 @@ import (
 	"github.com/taofit/e-book-fyne/internal/articles"
 	"github.com/taofit/e-book-fyne/internal/mainMenu"
 	"github.com/taofit/e-book-fyne/internal/navList"
+	"github.com/taofit/e-book-fyne/internal/pagination"
 	"github.com/taofit/e-book-fyne/internal/search"
 	"github.com/taofit/e-book-fyne/internal/themes"
 
@@ -16,12 +17,12 @@ import (
 )
 
 func main() {
-	hzApp := app.NewWithID("io.fyne.hz")
-	hzTheme := themes.HzDefaultTheme{}
-	hzApp.Settings().SetTheme(&hzTheme)
+	eBookApp := app.NewWithID("io.fyne.ebook")
+	eBTheme := themes.EBookDefaultTheme{}
+	eBookApp.Settings().SetTheme(&eBTheme)
 
 	appTitle := "eBookCollection"
-	w := hzApp.NewWindow(appTitle)
+	w := eBookApp.NewWindow(appTitle)
 	topWindow := w
 	articles.PopulateArticles()
 	w.SetMainMenu(mainMenu.MakeMenu())
@@ -36,7 +37,7 @@ func main() {
 
 	setArticle := func(a articles.Article) {
 		if fyne.CurrentDevice().IsMobile() {
-			child := hzApp.NewWindow(a.Title)
+			child := eBookApp.NewWindow(a.Title)
 			topWindow = child
 			child.SetContent(a.LoadFile(topWindow))
 			child.Show()
@@ -52,9 +53,35 @@ func main() {
 		content.Refresh()
 	}
 
+	var setArticleWithPag func(a articles.Article, id int, articlesForSubject *[]string)
+	setArticleWithPag = func(a articles.Article, id int, articlesForSubject *[]string) {
+		if fyne.CurrentDevice().IsMobile() {
+			child := eBookApp.NewWindow(a.Title)
+			topWindow = child
+			numOfAcls := len(*articlesForSubject)
+			childContent := container.NewBorder(
+				nil,
+				pagination.MakeBottomPag(child, a, id, numOfAcls, articlesForSubject, setArticleWithPag),
+				nil,
+				nil,
+				a.LoadFile(topWindow),
+			)
+			child.SetContent(childContent)
+			child.Show()
+			child.SetOnClosed(func() {
+				topWindow = w
+			})
+			return
+		}
+		title.SetText(a.Title)
+
+		content.Objects = []fyne.CanvasObject{a.LoadFile(w)}
+		content.Refresh()
+	}
+
 	setSubList := func(listTitle string, list fyne.CanvasObject) {
 		if fyne.CurrentDevice().IsMobile() {
-			child := hzApp.NewWindow(listTitle)
+			child := eBookApp.NewWindow(listTitle)
 			topWindow = child
 			child.SetContent(list)
 			child.Show()
@@ -73,7 +100,7 @@ func main() {
 	setSearchResult := func(resultCnt fyne.CanvasObject, input string) {
 		searchTitle := fmt.Sprintf("search \" %s \" result", input)
 		if fyne.CurrentDevice().IsMobile() {
-			child := hzApp.NewWindow(searchTitle)
+			child := eBookApp.NewWindow(searchTitle)
 			topWindow = child
 			child.SetContent(resultCnt)
 			child.Show()
@@ -94,11 +121,11 @@ func main() {
 	searchSection := search.MakeSearchEntry(setSearchResult, setArticle)
 	if fyne.CurrentDevice().IsMobile() {
 		topBar := makeTopBar(appTitle)
-		navSection := navSection.MakeNav(setArticle, setSubList, false)
+		navSection := navSection.MakeNav(setArticleWithPag, setSubList, false)
 		content := container.NewBorder(topBar, searchSection, nil, nil, navSection)
 		w.SetContent(content)
 	} else {
-		split := container.NewHSplit(navSection.MakeNav(setArticle, setSubList, true), article)
+		split := container.NewHSplit(navSection.MakeNav(setArticleWithPag, setSubList, true), article)
 		split.Offset = 0.2
 		content := container.NewBorder(nil, searchSection, nil, nil, split)
 		w.SetContent(content)

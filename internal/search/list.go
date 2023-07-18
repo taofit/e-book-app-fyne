@@ -16,7 +16,8 @@ func makeResultList(
 	resultSlice := searchKeyword(input)
 	curApp := fyne.CurrentApp()
 
-	list := &widget.List{
+	var list *widget.List
+	list = &widget.List{
 		Length: func() int {
 			return len(resultSlice)
 		},
@@ -34,6 +35,7 @@ func makeResultList(
 			}
 			item.(*fyne.Container).Objects[1].(*widget.RichText).Wrapping = fyne.TextWrapWord
 			item.(*fyne.Container).Objects[1].Refresh()
+			list.SetItemHeight(id, item.MinSize().Height)
 		},
 		OnSelected: func(id widget.ListItemID) {
 			articleKey := resultSlice[id].key

@@ -12,14 +12,14 @@ import (
 	"fyne.io/fyne/v2/theme"
 )
 
-type HzDefaultTheme struct {
+type EBookDefaultTheme struct {
 	useDark  bool
 	fontSize float32
 }
 
-var _ fyne.Theme = (*HzDefaultTheme)(nil)
+var _ fyne.Theme = (*EBookDefaultTheme)(nil)
 
-func (m *HzDefaultTheme) Color(n fyne.ThemeColorName, v fyne.ThemeVariant) color.Color {
+func (m *EBookDefaultTheme) Color(n fyne.ThemeColorName, v fyne.ThemeVariant) color.Color {
 	switch n {
 	case theme.ColorNameBackground, theme.ColorNameInputBackground,
 		theme.ColorNameOverlayBackground, theme.ColorNameMenuBackground:
@@ -41,15 +41,15 @@ func (m *HzDefaultTheme) Color(n fyne.ThemeColorName, v fyne.ThemeVariant) color
 	return theme.DefaultTheme().Color(n, v)
 }
 
-func (m *HzDefaultTheme) Font(s fyne.TextStyle) fyne.Resource {
+func (m *EBookDefaultTheme) Font(s fyne.TextStyle) fyne.Resource {
 	return bundled.ResourceFZKaiZ03RegularTtf
 }
 
-func (m *HzDefaultTheme) Icon(n fyne.ThemeIconName) fyne.Resource {
+func (m *EBookDefaultTheme) Icon(n fyne.ThemeIconName) fyne.Resource {
 	return theme.DefaultTheme().Icon(n)
 }
 
-func (m *HzDefaultTheme) Size(n fyne.ThemeSizeName) float32 {
+func (m *EBookDefaultTheme) Size(n fyne.ThemeSizeName) float32 {
 	switch n {
 	case theme.SizeNameLineSpacing:
 		return 2
@@ -60,10 +60,10 @@ func (m *HzDefaultTheme) Size(n fyne.ThemeSizeName) float32 {
 	return theme.DefaultTheme().Size(n)
 }
 
-func (m *HzDefaultTheme) SetThemeVariant(useDark bool) {
+func (m *EBookDefaultTheme) SetThemeVariant(useDark bool) {
 	m.useDark = useDark
 }
 
-func (m *HzDefaultTheme) SetFontSize(size float32) {
+func (m *EBookDefaultTheme) SetFontSize(size float32) {
 	m.fontSize = size
 }

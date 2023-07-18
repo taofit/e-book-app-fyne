@@ -7,36 +7,36 @@ import (
 )
 
 func MakeMenu() *fyne.MainMenu {
-	hzDefaultTheme := themes.HzDefaultTheme{}
+	eBDefaultTheme := themes.EBookDefaultTheme{}
 	curApp := fyne.CurrentApp()
 
 	themeMenuItems := []*fyne.MenuItem{
-		fyne.NewMenuItem("白天", func() {
-			hzDefaultTheme.SetThemeVariant(false)
-			curApp.Settings().SetTheme(&hzDefaultTheme)
+		fyne.NewMenuItem("light", func() {
+			eBDefaultTheme.SetThemeVariant(false)
+			curApp.Settings().SetTheme(&eBDefaultTheme)
 		}),
-		fyne.NewMenuItem("黑夜", func() {
-			hzDefaultTheme.SetThemeVariant(true)
-			curApp.Settings().SetTheme(&hzDefaultTheme)
+		fyne.NewMenuItem("dark", func() {
+			eBDefaultTheme.SetThemeVariant(true)
+			curApp.Settings().SetTheme(&eBDefaultTheme)
 		}),
 	}
-	themeMenu := fyne.NewMenu("主题", themeMenuItems...)
+	themeMenu := fyne.NewMenu("theme", themeMenuItems...)
 
 	fontSizeMenuItems := []*fyne.MenuItem{
 		fyne.NewMenuItem("A-", func() {
-			hzDefaultTheme.SetFontSize(-1)
-			curApp.Settings().SetTheme(&hzDefaultTheme)
+			eBDefaultTheme.SetFontSize(-1)
+			curApp.Settings().SetTheme(&eBDefaultTheme)
 		}),
 		fyne.NewMenuItem("A", func() {
-			hzDefaultTheme.SetFontSize(0)
-			curApp.Settings().SetTheme(&hzDefaultTheme)
+			eBDefaultTheme.SetFontSize(0)
+			curApp.Settings().SetTheme(&eBDefaultTheme)
 		}),
 		fyne.NewMenuItem("A+", func() {
-			hzDefaultTheme.SetFontSize(1)
-			curApp.Settings().SetTheme(&hzDefaultTheme)
+			eBDefaultTheme.SetFontSize(1)
+			curApp.Settings().SetTheme(&eBDefaultTheme)
 		}),
 	}
-	fontSize := fyne.NewMenu("字体大小", fontSizeMenuItems...)
+	fontSize := fyne.NewMenu("font size", fontSizeMenuItems...)
 	main := fyne.NewMainMenu(
 		themeMenu,
 		fontSize,
