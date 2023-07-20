@@ -34,12 +34,12 @@ var (
 
 	Articles = map[string]Article{}
 	// Articles = map[string]Article{
-	// 	"chronology":     {"重要纪事", "", ""},
-	// 	"biography":      {"法尊传记", "", ""},
-	// 	"youth":          {"年少峥嵘", "", ""},
-	// 	"monastery":      {"祖庭狮吼", "", ""},
-	// 	"dharmaFounding": {"华藏开宗", "", ""},
-	// 	"virtues":        {"圣德圣行", "", ""},
+	// 	"chronology":     {"important event", "", ""},
+	// 	"biography":      {"biography", "", ""},
+	// 	"youth":          {"earlier age", "", ""},
+	// 	"monastery":      {"lion roar", "", ""},
+	// 	"dharmaFounding": {"init the dharma", "", ""},
+	// 	"virtues":        {"saint", "", ""},
 	// }
 
 	ArticleIndex = map[string][]string{}
@@ -47,6 +47,7 @@ var (
 	// 	"rootSubjects": {"biography", "chronology"},
 	// 	"chronology": {"youth", "monastery", "dharmaFounding", "virtues"},
 	// }
+	RootSubjectsKey = "rootSubjects"
 )
 
 func PopulateArticles() {
@@ -57,7 +58,7 @@ func PopulateArticles() {
 		rootSubjects = append(rootSubjects, subject.Key)
 	}
 	processArticles(subjects)
-	ArticleIndex["rootSubjects"] = rootSubjects
+	ArticleIndex[RootSubjectsKey] = rootSubjects
 }
 
 func loadArticles() []Subject {

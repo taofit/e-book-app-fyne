@@ -12,6 +12,7 @@ import (
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
+	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
 )
 
@@ -30,9 +31,8 @@ func main() {
 	navSection := navList.NavSectionList{}
 
 	content := container.NewMax()
+	parentBtn := widget.NewButtonWithIcon("", theme.MoveUpIcon(), func() {})
 	title := widget.NewLabel("Article title")
-	// intro := widget.NewLabel("Introduction goes here")
-	// intro.Wrapping = fyne.TextWrapWord
 
 	setArticle := func(a articles.Article) {
 		if fyne.CurrentDevice().IsMobile() {
@@ -46,37 +46,10 @@ func main() {
 			return
 		}
 		title.SetText(a.Title)
-		// intro.SetText(a.Intro)
 
 		content.Objects = []fyne.CanvasObject{a.LoadFile(w)}
 		content.Refresh()
 	}
-
-	// var setArticleWithPag func(a articles.Article, id int, articlesForSubject *[]string)
-	// setArticleWithPag = func(a articles.Article, id int, articlesForSubject *[]string) {
-	// 	if fyne.CurrentDevice().IsMobile() {
-	// 		child := eBookApp.NewWindow(a.Title)
-	// 		topWindow = child
-	// 		numOfAcls := len(*articlesForSubject)
-	// 		childContent := container.NewBorder(
-	// 			nil,
-	// 			pagination.MakeBottomPag(child, a, id, numOfAcls, articlesForSubject, setArticleWithPag),
-	// 			nil,
-	// 			nil,
-	// 			a.LoadFile(topWindow),
-	// 		)
-	// 		child.SetContent(childContent)
-	// 		child.Show()
-	// 		child.SetOnClosed(func() {
-	// 			topWindow = w
-	// 		})
-	// 		return
-	// 	}
-	// 	title.SetText(a.Title)
-
-	// 	content.Objects = []fyne.CanvasObject{a.LoadFile(w)}
-	// 	content.Refresh()
-	// }
 
 	setSubList := func(listTitle string, list fyne.CanvasObject) {
 		if fyne.CurrentDevice().IsMobile() {
@@ -90,10 +63,16 @@ func main() {
 			return
 		}
 		title.SetText(listTitle)
-		// intro.SetText("brief introduction goes here")
 
 		content.Objects = []fyne.CanvasObject{list}
 		content.Refresh()
+	}
+
+	gotoParentLevel := func(articlesForSubject []string) {}
+	gotoParentLevel = func(articlesForSubject []string) {
+		parentBtn.OnTapped = func() {
+			loadRightContent(navSection, setArticle, setSubList, content, articlesForSubject, gotoParentLevel)
+		}
 	}
 
 	setSearchResult := func(resultCnt fyne.CanvasObject, input string) {
@@ -115,18 +94,18 @@ func main() {
 	}
 
 	article := container.NewBorder(
-		container.NewVBox(title, widget.NewSeparator()), nil, nil, nil, content)
+		container.NewVBox(title, parentBtn, widget.NewSeparator()), nil, nil, nil, content)
 
 	searchSection := search.MakeSearchEntry(setSearchResult, setArticle)
-	rootSubjects := articles.ArticleIndex["rootSubjects"]
+	rootSubjects := articles.ArticleIndex[articles.RootSubjectsKey]
 	if fyne.CurrentDevice().IsMobile() {
 		topBar := makeTopBar(appTitle)
-		navSection := navSection.MakeNav(setArticle, setSubList, rootSubjects, false)
+		navSection := navSection.MakeMblNav(setArticle, setSubList, rootSubjects, false)
 		content := container.NewBorder(topBar, searchSection, nil, nil, navSection)
 		w.SetContent(content)
 	} else {
 		split := container.NewHSplit(
-			navSection.MakeNav(setArticle, setSubList, rootSubjects, true),
+			navSection.MakeNav(setArticle, setSubList, rootSubjects, gotoParentLevel, true),
 			article,
 		)
 		split.Offset = 0.2
@@ -143,4 +122,17 @@ func makeTopBar(titleName string) *widget.Label {
 	topBar.Alignment = fyne.TextAlignCenter
 
 	return topBar
+}
+
+func loadRightContent(
+	navSection navList.NavSectionList,
+	setArticle func(a articles.Article),
+	setSubList func(listTitle string, list fyne.CanvasObject),
+	content *fyne.Container,
+	articlesForSubject []string,
+	gotoParentLevel func(articlesForSubject []string),
+) {
+	rightContent := navSection.MakeNav(setArticle, setSubList, articlesForSubject, gotoParentLevel, false)
+	content.Objects = []fyne.CanvasObject{rightContent}
+	content.Refresh()
 }
