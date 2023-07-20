@@ -6,8 +6,6 @@ package themes
 import (
 	"image/color"
 
-	"github.com/taofit/e-book-fyne/internal/bundled"
-
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/theme"
 )
@@ -42,7 +40,7 @@ func (m *EBookDefaultTheme) Color(n fyne.ThemeColorName, v fyne.ThemeVariant) co
 }
 
 func (m *EBookDefaultTheme) Font(s fyne.TextStyle) fyne.Resource {
-	return bundled.ResourceFZKaiZ03RegularTtf
+	return theme.DefaultTheme().Font(s)
 }
 
 func (m *EBookDefaultTheme) Icon(n fyne.ThemeIconName) fyne.Resource {

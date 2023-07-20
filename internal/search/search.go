@@ -13,6 +13,8 @@ import (
 	"fyne.io/fyne/v2/widget"
 )
 
+const wordCount = 15
+
 type articleWithKey struct {
 	key string
 	articles.Article
@@ -76,11 +78,11 @@ func worker(jobs <-chan articleWithKey, subResults chan<- []resultItem, word str
 
 		i := containWord(runeText, runeWord)
 		if i > -1 {
-			startIdx := i - 10
+			startIdx := i - wordCount
 			if startIdx < 0 {
 				startIdx = 0
 			}
-			endIdx := i + len(runeWord) + 10
+			endIdx := i + len(runeWord) + wordCount
 			if endIdx > len(runeText) {
 				endIdx = len(runeText)
 			}

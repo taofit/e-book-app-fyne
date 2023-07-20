@@ -44,7 +44,7 @@ var (
 
 	ArticleIndex = map[string][]string{}
 	// ArticleIndex = map[string][]string{
-	// 	"rootSubjects":           {"biography", "chronology"},
+	// 	"rootSubjects": {"biography", "chronology"},
 	// 	"chronology": {"youth", "monastery", "dharmaFounding", "virtues"},
 	// }
 )
@@ -94,13 +94,9 @@ func processArticles(subjects []Subject) {
 
 func (subject Subject) populateArticlesUnderSubject(key string) {
 	var subjectTableOfContent = []string{}
-
 	for _, contentArticle := range subject.TableOfContents {
-		title := contentArticle.Title //article title showing on the app
 		fileName := contentArticle.Key
-		filePath := assetsFolder + "/" + fileName + ".txt"
 		subjectTableOfContent = append(subjectTableOfContent, fileName)
-		Articles[fileName] = Article{Title: title, Intro: "", FilePath: filePath}
 	}
 	ArticleIndex[key] = subjectTableOfContent
 	Articles[key] = Article{Title: subject.Title, Intro: "", FilePath: ""}
@@ -122,10 +118,14 @@ func (a Article) GetFileContent() string {
 	return string(input)
 }
 
-func generateText(content string) fyne.CanvasObject {
-	rich := widget.NewRichTextWithText(content)
-	rich.Wrapping = fyne.TextWrapWord
-	rich.Scroll = container.ScrollBoth
+func (a Article) HasFile() bool {
+	return a.FilePath != ""
+}
 
-	return rich
+func generateText(content string) fyne.CanvasObject {
+	ricTxt := widget.NewRichTextWithText(content)
+	ricTxt.Wrapping = fyne.TextWrapWord
+	ricTxt.Scroll = container.ScrollBoth
+
+	return ricTxt
 }

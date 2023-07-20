@@ -6,7 +6,6 @@ import (
 	"github.com/taofit/e-book-fyne/internal/articles"
 	"github.com/taofit/e-book-fyne/internal/mainMenu"
 	"github.com/taofit/e-book-fyne/internal/navList"
-	"github.com/taofit/e-book-fyne/internal/pagination"
 	"github.com/taofit/e-book-fyne/internal/search"
 	"github.com/taofit/e-book-fyne/internal/themes"
 
@@ -53,31 +52,31 @@ func main() {
 		content.Refresh()
 	}
 
-	var setArticleWithPag func(a articles.Article, id int, articlesForSubject *[]string)
-	setArticleWithPag = func(a articles.Article, id int, articlesForSubject *[]string) {
-		if fyne.CurrentDevice().IsMobile() {
-			child := eBookApp.NewWindow(a.Title)
-			topWindow = child
-			numOfAcls := len(*articlesForSubject)
-			childContent := container.NewBorder(
-				nil,
-				pagination.MakeBottomPag(child, a, id, numOfAcls, articlesForSubject, setArticleWithPag),
-				nil,
-				nil,
-				a.LoadFile(topWindow),
-			)
-			child.SetContent(childContent)
-			child.Show()
-			child.SetOnClosed(func() {
-				topWindow = w
-			})
-			return
-		}
-		title.SetText(a.Title)
+	// var setArticleWithPag func(a articles.Article, id int, articlesForSubject *[]string)
+	// setArticleWithPag = func(a articles.Article, id int, articlesForSubject *[]string) {
+	// 	if fyne.CurrentDevice().IsMobile() {
+	// 		child := eBookApp.NewWindow(a.Title)
+	// 		topWindow = child
+	// 		numOfAcls := len(*articlesForSubject)
+	// 		childContent := container.NewBorder(
+	// 			nil,
+	// 			pagination.MakeBottomPag(child, a, id, numOfAcls, articlesForSubject, setArticleWithPag),
+	// 			nil,
+	// 			nil,
+	// 			a.LoadFile(topWindow),
+	// 		)
+	// 		child.SetContent(childContent)
+	// 		child.Show()
+	// 		child.SetOnClosed(func() {
+	// 			topWindow = w
+	// 		})
+	// 		return
+	// 	}
+	// 	title.SetText(a.Title)
 
-		content.Objects = []fyne.CanvasObject{a.LoadFile(w)}
-		content.Refresh()
-	}
+	// 	content.Objects = []fyne.CanvasObject{a.LoadFile(w)}
+	// 	content.Refresh()
+	// }
 
 	setSubList := func(listTitle string, list fyne.CanvasObject) {
 		if fyne.CurrentDevice().IsMobile() {
@@ -119,13 +118,17 @@ func main() {
 		container.NewVBox(title, widget.NewSeparator()), nil, nil, nil, content)
 
 	searchSection := search.MakeSearchEntry(setSearchResult, setArticle)
+	rootSubjects := articles.ArticleIndex["rootSubjects"]
 	if fyne.CurrentDevice().IsMobile() {
 		topBar := makeTopBar(appTitle)
-		navSection := navSection.MakeNav(setArticleWithPag, setSubList, false)
+		navSection := navSection.MakeNav(setArticle, setSubList, rootSubjects, false)
 		content := container.NewBorder(topBar, searchSection, nil, nil, navSection)
 		w.SetContent(content)
 	} else {
-		split := container.NewHSplit(navSection.MakeNav(setArticleWithPag, setSubList, true), article)
+		split := container.NewHSplit(
+			navSection.MakeNav(setArticle, setSubList, rootSubjects, true),
+			article,
+		)
 		split.Offset = 0.2
 		content := container.NewBorder(nil, searchSection, nil, nil, split)
 		w.SetContent(content)

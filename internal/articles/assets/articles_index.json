@@ -1,149 +1,439 @@
 [
     {
         "key": "forward",
-        "title": "forward"
+        "title": "Forward"
     },
     {
-        "key": "book1",
-        "title": "The Shadow out of Time",
-        "tableOfContents": [
+        "key": "non-fiction",
+        "title": "Non-fiction",
+        "tableOfContents":[
             {
-                "key": "book1_1",
-                "title": "Chapter 1"
+                "key": "self-help",
+                "title": "Self-help",
+                "tableOfContents":[
+                    {
+                        "key": "booknf1",
+                        "title": "The Way to Love",
+                        "tableOfContents": [
+                            {
+                                "key":"booknf1_1",
+                                "title": "Introduction"
+                            },
+                            {
+                                "key":"booknf1_2",
+                                "title": "Profit and Loss"
+                            },
+                            {
+                                "key":"booknf1_3",
+                                "title": "Discipleship"
+                            },
+                            {
+                                "key":"booknf1_4",
+                                "title": "The Extra Mile"
+                            },
+                            {
+                                "key":"booknf1_5",
+                                "title": "He Went Away Sad"
+                            },
+                            {
+                                "key":"booknf1_6",
+                                "title": "The Eye of a Needle"
+                            },
+                            {
+                                "key":"booknf1_7",
+                                "title": "Nowhere to Go"
+                            },
+                            {
+                                "key":"booknf1_8",
+                                "title": "Bring in the Poor"
+                            },
+                            {
+                                "key":"booknf1_9",
+                                "title": "The Blind See"
+                            },
+                            {
+                                "key":"booknf1_10",
+                                "title": "Heaven at Hand"
+                            },
+                            {
+                                "key":"booknf1_11",
+                                "title": "What Must I Do?"
+                            },
+                            {
+                                "key":"booknf1_12",
+                                "title": "No Stone Will Be Left"
+                            },
+                            {
+                                "key":"booknf1_13",
+                                "title": "How To Give?"
+                            },
+                            {
+                                "key":"booknf1_14",
+                                "title": "Serpents And Doves"
+                            },
+                            {
+                                "key":"booknf1_15",
+                                "title": "Men Of Violence"
+                            },
+                            {
+                                "key":"booknf1_16",
+                                "title": "Show No Partiality"
+                            },
+                            {
+                                "key":"booknf1_17",
+                                "title": "One Teacher"
+                            },
+                            {
+                                "key":"booknf1_18",
+                                "title": "Become Like Children"
+                            },
+                            {
+                                "key":"booknf1_19",
+                                "title": "Love One Another"
+                            },
+                            {
+                                "key":"booknf1_20",
+                                "title": "No Looking Back"
+                            },
+                            {
+                                "key":"booknf1_21",
+                                "title": "Love Your Enemies"                            
+                            },
+                            {
+                                "key":"booknf1_22",
+                                "title": "Tax Collectors And Sinners"
+                            },
+                            {
+                                "key":"booknf1_23",
+                                "title": "Be Awake"
+                            },
+                            {
+                                "key":"booknf1_24",
+                                "title": "The Mountain Of Prayer"
+                            },
+                            {
+                                "key":"booknf1_25",
+                                "title": "Judge Not"
+                            },
+                            {
+                                "key":"booknf1_26",
+                                "title": "Pluck Out The Eye"
+                            },
+                            {
+                                "key":"booknf1_27",
+                                "title": "Suffering And Glory"
+                            },
+                            {
+                                "key":"booknf1_28",
+                                "title": "Fire On The Earth"
+                            },
+                            {
+                                "key":"booknf1_29",
+                                "title": "Consider The lilies"
+                            },
+                            {
+                                "key":"booknf1_30",
+                                "title": "Lost And Found"
+                            },
+                            {
+                                "key":"booknf1_31",
+                                "title": "The Lamp of The Body"
+                            },
+                            {
+                                "key":"booknf1_32",
+                                "title": "Be Ready"
+                            }
+                        ]
+                    },
+                    {
+                        "key":"booknf11",
+                        "title": "The Untethered Soul",
+                        "tableOfContents":[
+                            {
+                                "key":"booknf11_1",
+                                "title": "introduction"
+                            },
+                            {
+                                "key": "booknf11_2",
+                                "title": "PART I AWAKENING CONSCIOUSNESS",
+                                "tableOfContents":[
+                                    {
+                                        "key": "booknf11_2_1",
+                                        "title": "1 the voice inside your head"
+                                    },
+                                    {
+                                        "key": "booknf11_2_2",
+                                        "title": "2 your inner roommate"
+                                    },
+                                    {
+                                        "key": "booknf11_2_3",
+                                        "title": "3 who are you?"
+                                    },
+                                    {
+                                        "key": "booknf11_2_4",
+                                        "title": "4 the lucid self"
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "booknf11_3",
+                                "title": "PART II EXPERIENCING ENERGY",
+                                "tableOfContents":[
+                                    {
+                                        "key": "booknf11_3_1",
+                                        "title": "5 infinite energy"
+                                    },
+                                    {
+                                        "key": "booknf11_3_2",
+                                        "title": "6 the secrets of the spiritual heart"
+                                    },
+                                    {
+                                        "key": "booknf11_3_3",
+                                        "title": "7 transcending the tendency to close"
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "booknf11_4",
+                                "title": "PART III FREEING YOURSELF",
+                                "tableOfContents":[
+                                    {
+                                        "key": "booknf11_4_1",
+                                        "title": "8 let go now or fall"
+                                    },
+                                    {
+                                        "key": "booknf11_4_2",
+                                        "title": "9 removing your inner thorn"
+                                    },
+                                    {
+                                        "key": "booknf11_4_3",
+                                        "title": "10 stealing freedom for your soul"
+                                    },
+                                    {
+                                        "key": "booknf11_4_4",
+                                        "title": "11 pain, the price of freedom"
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "booknf11_5",
+                                "title": "PART IV GOING BEYOND",
+                                "tableOfContents":[
+                                    {
+                                        "key": "booknf11_5_1",
+                                        "title": "12 taking down the walls"
+                                    },
+                                    {
+                                        "key": "booknf11_5_2",
+                                        "title": "13 far, far beyond"
+                                    },
+                                    {
+                                        "key": "booknf11_5_3",
+                                        "title": "14 letting go of false solidity"
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "booknf11_6",
+                                "title": "PART V LIVING LIFE",
+                                "tableOfContents":[
+                                    {
+                                        "key": "booknf11_6_1",
+                                        "title": "15 the path of unconditional happiness"
+                                    },
+                                    {
+                                        "key": "booknf11_6_2",
+                                        "title": "16 the spiritual path of nonresistance"
+                                    },
+                                    {
+                                        "key": "booknf11_6_3",
+                                        "title": "17 contemplating death"
+                                    },
+                                    {
+                                        "key": "booknf11_6_4",
+                                        "title": "18 the secret of the middle way"
+                                    },
+                                    {
+                                        "key": "booknf11_6_5",
+                                        "title": "19 the loving eyes of god"
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "booknf11_7",
+                                "title": "About the Author"
+                            }
+                        ]
+                    }
+                ]
             },
             {
-                "key": "book1_2",
-                "title": "Chapter 2"
-            },
-            {
-                "key": "book1_3",
-                "title": "Chapter 3"
-            },
-            {
-                "key": "book1_4",
-                "title": "Chapter 4"
-            },
-            {
-                "key": "book1_5",
-                "title": "Chapter 5"
-            },
-            {
-                "key": "book1_6",
-                "title": "Chapter 6"
-            },
-            {
-                "key": "book1_7",
-                "title": "Chapter 7"
-            },
-            {
-                "key": "book1_8",
-                "title": "Chapter 8"
+                "key":"essays",
+                "title": "Essays",
+                "tableOfContents":[
+                    {
+                        "key": "booknf2",
+                        "title": "Orwell Essays",
+                        "tableOfContents":[
+                            {
+                                "key": "booknf2_1",
+                                "title": "The Spike (1931)"
+                            },
+                            {
+                                "key": "booknf2_6",
+                                "title": "SHOOTING AN ELEPHANT (1936)"
+                            },
+                            {
+                                "key": "booknf2_2",
+                                "title": "North and South (1937) (From \"The Road to Wigan Pier\")"
+                            },
+                            {
+                                "key": "booknf2_3",
+                                "title": "The Art of Donald McGill (1941)"
+                            },
+                            {
+                                "key": "booknf2_4",
+                                "title": "Good Bad Books (1945)"
+                            },
+                            {
+                                "key": "booknf2_5",
+                                "title": "A Nice Cup of Tea (1946)"
+                            },
+                            {
+                                "key": "booknf2_7",
+                                "title": "Lear, Tolstoy and the Fool (1947)"
+                            },
+                            {
+                                "key": "booknf2_8",
+                                "title": "NONSENSE POETRY"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
     {
-        "key": "book2",
-        "title": "THE WAY TO LovE",
-        "tableOfContents": [
+        "key": "fiction",
+        "title": "Fiction",
+        "tableOfContents":[
             {
-                "key":"book2_1",
-                "title": "Introduction"
-            },
-            {
-                "key":"book2_2",
-                "title": "Profit and Loss"
-            },
-            {
-                "key":"book2_3",
-                "title": "Discipleship"
-            },
-            {
-                "key":"book2_4",
-                "title": "The Extra Mile"
-            },
-            {
-                "key":"book2_5",
-                "title": "He Went Away Sad"
-            },
-            {
-                "key":"book2_6",
-                "title": "The Eye of a Needle"
-            },
-            {
-                "key":"book2_7",
-                "title": "Nowhere to Go"
-            },
-            {
-                "key":"book2_8",
-                "title": "BRING tN THE PooR"
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
-            },
-            {
-                "key":"book2_1",
-                "title": ""
+                "key": "bookf1",
+                "title": "The Shadow out of Time",
+                "tableOfContents": [
+                    {
+                        "key": "bookf1_1",
+                        "title": "Chapter 1",
+                        "tableOfContents":[
+                            {
+                                "key": "bookf1_1_1",
+                                "title": "Part 1 of Chapter 1"
+                            },
+                            {
+                                "key": "bookf1_1_2",
+                                "title": "Part 2 of Chapter 1"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "bookf1_2",
+                        "title": "Chapter 2",
+                        "tableOfContents":[
+                            {
+                                "key": "bookf1_2_1",
+                                "title": "Part 1 of Chapter 2"
+                            },
+                            {
+                                "key": "bookf1_2_2",
+                                "title": "Part 2 of Chapter 2"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "bookf1_3",
+                        "title": "Chapter 3",
+                        "tableOfContents":[
+                            {
+                                "key": "bookf1_3_1",
+                                "title": "Part 1 of Chapter 3"
+                            },
+                            {
+                                "key": "bookf1_3_2",
+                                "title": "Part 2 of Chapter 3"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "bookf1_4",
+                        "title": "Chapter 4",
+                        "tableOfContents":[
+                            {
+                                "key": "bookf1_4_1",
+                                "title": "Part 1 of Chapter 4"
+                            },
+                            {
+                                "key": "bookf1_4_2",
+                                "title": "Part 2 of Chapter 4"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "bookf1_5",
+                        "title": "Chapter 5",
+                        "tableOfContents":[
+                            {
+                                "key": "bookf1_5_1",
+                                "title": "Part 1 of Chapter 5"
+                            },
+                            {
+                                "key": "bookf1_5_2",
+                                "title": "Part 2 of Chapter 5"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "bookf1_6",
+                        "title": "Chapter 6",
+                        "tableOfContents":[
+                            {
+                                "key": "bookf1_6_1",
+                                "title": "Part 1  of Chapter 6"
+                            },
+                            {
+                                "key": "bookf1_6_2",
+                                "title": "Part 2 of Chapter 6"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "bookf1_7",
+                        "title": "Chapter 7",
+                        "tableOfContents":[
+                            {
+                                "key": "bookf1_7_1",
+                                "title": "Part 1  of Chapter 7"
+                            },
+                            {
+                                "key": "bookf1_7_2",
+                                "title": "Part 2 of Chapter 7"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "bookf1_8",
+                        "title": "Chapter 8",
+                        "tableOfContents":[
+                            {
+                                "key": "bookf1_8_1",
+                                "title": "Part 1  of Chapter 8"
+                            },
+                            {
+                                "key": "bookf1_8_2",
+                                "title": "Part 2 of Chapter 8"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }
