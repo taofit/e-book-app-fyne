@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a cross platform ebook application made in Fyne toolkit. It can be run in mobile and desktop. The app has some books pre-installed, now it contains non-fiction and fiction books, of course book categories can be changed and user can add or remove books by modifying `internal/articles/assets/articles_index.json` file and add text files that contains the book text to `internal/articles/assets` folder. A later step in the tutorial will explain how to add more books.
+This project is a cross platform ebook application made in Fyne toolkit. It can be run in mobile and desktop. The app has some books pre-installed, now it contains non-fiction and fiction books, of course book categories can be changed and user can add or remove books by modifying `internal/articles/assets/articles_index.json` file and add or remove text files that contains the book text to `internal/articles/assets` folder. A later step in the tutorial will explain how to add more books.
 
 ## Run the program
 
@@ -74,4 +74,4 @@ For example:
  ]
 ```
 
-key must be a unique in the `articles_index.json` file, if there is no key `tableOfContents` in a json object {key, title} then, this json object depicts a file whose name is key's value, such as if key's value is `chapter2Key`, the file `chapter2Key.txt` should be saved under `internal/articles/assets` folder.
+A key's value must be unique in the `articles_index.json` file, if there is no `tableOfContents` key in a json object, then the json object's structure is `{key, title}`, then this json object depicts a file whose name is key's value, such as if key's value is `chapter2Key`, the file `chapter2Key.txt` that contains the content of the chapter should be saved under `internal/articles/assets` folder.
