@@ -47,7 +47,7 @@ var (
 	// 	"rootSubjects": {"biography", "chronology"},
 	// 	"chronology": {"youth", "monastery", "dharmaFounding", "virtues"},
 	// }
-	RootSubjectsKey = "rootSubjects"
+	RootSubjectsKey = ""
 )
 
 func PopulateArticles() {

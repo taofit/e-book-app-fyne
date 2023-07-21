@@ -6,6 +6,7 @@ import (
 	"github.com/taofit/e-book-fyne/internal/articles"
 	"github.com/taofit/e-book-fyne/internal/mainMenu"
 	"github.com/taofit/e-book-fyne/internal/navList"
+	"github.com/taofit/e-book-fyne/internal/navTree"
 	"github.com/taofit/e-book-fyne/internal/search"
 	"github.com/taofit/e-book-fyne/internal/themes"
 
@@ -95,7 +96,7 @@ func main() {
 		article := container.NewBorder(
 			container.NewVBox(title, widget.NewSeparator()), nil, nil, nil, content)
 		split := container.NewHSplit(
-			navSection.MakeNav(setArticle, setSubList, rootSubjects, true),
+			navTree.MakeNav(setArticle, true),
 			article,
 		)
 		split.Offset = 0.2
