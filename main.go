@@ -12,7 +12,6 @@ import (
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
-	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
 )
 
@@ -31,7 +30,6 @@ func main() {
 	navSection := navList.NavSectionList{}
 
 	content := container.NewMax()
-	parentBtn := widget.NewButtonWithIcon("", theme.MoveUpIcon(), func() {})
 	title := widget.NewLabel("Article title")
 
 	setArticle := func(a articles.Article) {
@@ -68,13 +66,6 @@ func main() {
 		content.Refresh()
 	}
 
-	gotoParentLevel := func(articlesForSubject []string) {}
-	gotoParentLevel = func(articlesForSubject []string) {
-		parentBtn.OnTapped = func() {
-			loadRightContent(navSection, setArticle, setSubList, content, articlesForSubject, gotoParentLevel)
-		}
-	}
-
 	setSearchResult := func(resultCnt fyne.CanvasObject, input string) {
 		searchTitle := fmt.Sprintf("search \" %s \" result", input)
 		if fyne.CurrentDevice().IsMobile() {
@@ -93,9 +84,6 @@ func main() {
 		content.Refresh()
 	}
 
-	article := container.NewBorder(
-		container.NewVBox(title, parentBtn, widget.NewSeparator()), nil, nil, nil, content)
-
 	searchSection := search.MakeSearchEntry(setSearchResult, setArticle)
 	rootSubjects := articles.ArticleIndex[articles.RootSubjectsKey]
 	if fyne.CurrentDevice().IsMobile() {
@@ -104,8 +92,10 @@ func main() {
 		content := container.NewBorder(topBar, searchSection, nil, nil, navSection)
 		w.SetContent(content)
 	} else {
+		article := container.NewBorder(
+			container.NewVBox(title, widget.NewSeparator()), nil, nil, nil, content)
 		split := container.NewHSplit(
-			navSection.MakeNav(setArticle, setSubList, rootSubjects, gotoParentLevel, true),
+			navSection.MakeNav(setArticle, setSubList, rootSubjects, true),
 			article,
 		)
 		split.Offset = 0.2
@@ -122,17 +112,4 @@ func makeTopBar(titleName string) *widget.Label {
 	topBar.Alignment = fyne.TextAlignCenter
 
 	return topBar
-}
-
-func loadRightContent(
-	navSection navList.NavSectionList,
-	setArticle func(a articles.Article),
-	setSubList func(listTitle string, list fyne.CanvasObject),
-	content *fyne.Container,
-	articlesForSubject []string,
-	gotoParentLevel func(articlesForSubject []string),
-) {
-	rightContent := navSection.MakeNav(setArticle, setSubList, articlesForSubject, gotoParentLevel, false)
-	content.Objects = []fyne.CanvasObject{rightContent}
-	content.Refresh()
 }

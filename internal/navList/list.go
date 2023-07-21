@@ -1,8 +1,6 @@
 package navList
 
 import (
-	"fmt"
-
 	"github.com/taofit/e-book-fyne/internal/articles"
 
 	"fyne.io/fyne/v2"
@@ -90,17 +88,12 @@ func (section *NavSectionList) MakeNav(
 	setArticle func(article articles.Article),
 	setSubList func(listTitle string, list fyne.CanvasObject),
 	articlesForSubject []string,
-	gotoParentLevel func(articlesForSubject []string),
 	loadPrevious bool,
 ) fyne.CanvasObject {
 	curApp := fyne.CurrentApp()
 
 	section.list = &widget.List{
 		Length: func() int {
-			parentList := getNoRootParentList(articlesForSubject)
-			if len(parentList) > 0 {
-				gotoParentLevel(parentList)
-			}
 			return len(articlesForSubject)
 		},
 		CreateItem: func() fyne.CanvasObject {
@@ -118,12 +111,11 @@ func (section *NavSectionList) MakeNav(
 			aclsForSubject, ok := articles.ArticleIndex[subjectName]
 			if ok {
 				subNavSection := NavSectionList{}
-				list := subNavSection.MakeNav(setArticle, setSubList, aclsForSubject, gotoParentLevel, false)
+				list := subNavSection.MakeNav(setArticle, setSubList, aclsForSubject, false)
 				setSubList(listTitle, list)
 			} else {
 				if a, ok := articles.Articles[subjectName]; ok {
 					curApp.Preferences().SetInt(PreferenceCurrentArticle, id)
-					gotoParentLevel(articlesForSubject)
 					setArticle(a)
 				}
 			}
@@ -138,18 +130,18 @@ func (section *NavSectionList) MakeNav(
 	return section.list
 }
 
-func findParentList(subjectName string) []string {
+func findParentList(subjectName string) ([]string, string, string) {
 	var key string
 	var parentKey string
 	for k, subList := range articles.ArticleIndex {
-		if contains(subList, subjectName) {
+		if Contains(subList, subjectName) {
 			key = k
 			break
 		}
 	}
 	if key != "" {
 		for k, subList := range articles.ArticleIndex {
-			if contains(subList, key) && k != articles.RootSubjectsKey {
+			if Contains(subList, key) && k != articles.RootSubjectsKey {
 				parentKey = k
 				break
 			}
@@ -158,12 +150,12 @@ func findParentList(subjectName string) []string {
 
 	aclsForSubject, ok := articles.ArticleIndex[parentKey]
 	if ok {
-		return aclsForSubject
+		return aclsForSubject, key, parentKey
 	}
-	return []string{}
+	return []string{}, "", ""
 }
 
-func contains(s []string, str string) bool {
+func Contains(s []string, str string) bool {
 	for _, v := range s {
 		if v == str {
 			return true
@@ -173,12 +165,12 @@ func contains(s []string, str string) bool {
 	return false
 }
 
-func getNoRootParentList(articlesForSubject []string) []string {
+func getNoRootParentList(articlesForSubject []string) ([]string, string, string) {
 	if len(articlesForSubject) > 0 {
-		parentLevelList := findParentList(articlesForSubject[0])
+		parentLevelList, key, parentKey := findParentList(articlesForSubject[0])
 		if len(parentLevelList) > 0 {
-			return parentLevelList
+			return parentLevelList, key, parentKey
 		}
 	}
-	return []string{}
+	return []string{}, "", ""
 }
