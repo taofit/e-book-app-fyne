@@ -75,3 +75,12 @@ For example:
 ```
 
 A key's value must be unique in the `articles_index.json` file, if there is no `tableOfContents` key in a json object, then the json object's structure is `{key, title}`, then this json object depicts a file whose name is key's value, such as if key's value is `chapter2Key`, the file `chapter2Key.txt` that contains the content of the chapter should be saved under `internal/articles/assets` folder.
+
+## app screenshots
+
+![navigation](internal/screenShot/mainNavi.png)
+![setting part](internal/screenShot/mainMenu.png)
+![one category](internal/screenShot/aCategory.png)
+![category list](internal/screenShot/chapterList.png)
+![article content](internal/screenShot/content.png)
+![higher category](internal/screenShot/directoryAboveChapter.png)
