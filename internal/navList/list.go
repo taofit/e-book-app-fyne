@@ -57,11 +57,13 @@ func (section *NavSectionList) MakeMblNav(
 			subjectName := articlesForSubject[id]
 			listTitle := articles.Articles[subjectName].Title
 			item.(*TappableLabel).SetText(listTitle)
+			item.(*TappableLabel).Wrapping = fyne.TextWrapBreak
 			item.(*TappableLabel).SetListItemID(id)
+			section.list.SetItemHeight(id, item.MinSize().Height)
 		},
 		OnSelected: func(id widget.ListItemID) {
 			subjectName := articlesForSubject[id]
-			listTitle := articles.Articles[subjectName].Title
+			listTitle := articles.Articles[subjectName].ShortenTitle()
 			articlesForSubject, ok := articles.ArticleIndex[subjectName]
 			if ok {
 				subNavSection := NavSectionList{}

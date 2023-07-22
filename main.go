@@ -21,7 +21,7 @@ func main() {
 	eBTheme := themes.EBookDefaultTheme{}
 	eBookApp.Settings().SetTheme(&eBTheme)
 
-	appTitle := "eBookCollection"
+	appTitle := "E-book Collection"
 	w := eBookApp.NewWindow(appTitle)
 	topWindow := w
 	articles.PopulateArticles()
@@ -35,7 +35,7 @@ func main() {
 
 	setArticle := func(a articles.Article) {
 		if fyne.CurrentDevice().IsMobile() {
-			child := eBookApp.NewWindow(a.Title)
+			child := eBookApp.NewWindow(a.ShortenTitle())
 			topWindow = child
 			child.SetContent(a.LoadFile(topWindow))
 			child.Show()

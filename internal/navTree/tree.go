@@ -34,6 +34,7 @@ func MakeNav(
 				return
 			}
 			node.(*widget.Label).SetText(a.Title)
+			node.(*widget.Label).Wrapping = fyne.TextWrapBreak
 		},
 		OnSelected: func(uid widget.TreeNodeID) {
 			if a, ok := articles.Articles[uid]; ok {

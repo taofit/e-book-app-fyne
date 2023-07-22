@@ -4,6 +4,7 @@ import (
 	"embed"
 	"encoding/json"
 	"log"
+	"unicode/utf8"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/container"
@@ -53,7 +54,6 @@ var (
 func PopulateArticles() {
 	var rootSubjects []string
 	var subjects = loadArticles()
-
 	for _, subject := range subjects {
 		rootSubjects = append(rootSubjects, subject.Key)
 	}
@@ -121,6 +121,18 @@ func (a Article) GetFileContent() string {
 
 func (a Article) HasFile() bool {
 	return a.FilePath != ""
+}
+
+func (a Article) ShortenTitle(length ...int) string {
+	lenTemp := 30
+	if len(length) > 0 {
+		lenTemp = length[0]
+	}
+	if utf8.RuneCountInString(a.Title) > lenTemp {
+		return a.Title[0:lenTemp] + "..."
+	}
+
+	return a.Title
 }
 
 func generateText(content string) fyne.CanvasObject {

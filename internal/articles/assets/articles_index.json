@@ -159,19 +159,35 @@
                                 "tableOfContents":[
                                     {
                                         "key": "booknf11_2_1",
-                                        "title": "1 the voice inside your head"
+                                        "title": "1 the voice inside your head (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_2_11",
+                                        "title": "1 the voice inside your head (II)"
                                     },
                                     {
                                         "key": "booknf11_2_2",
-                                        "title": "2 your inner roommate"
+                                        "title": "2 your inner roommate (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_2_21",
+                                        "title": "2 your inner roommate (II)"
                                     },
                                     {
                                         "key": "booknf11_2_3",
-                                        "title": "3 who are you?"
+                                        "title": "3 who are you? (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_2_31",
+                                        "title": "3 who are you? (II)"
                                     },
                                     {
                                         "key": "booknf11_2_4",
-                                        "title": "4 the lucid self"
+                                        "title": "4 the lucid self (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_2_41",
+                                        "title": "4 the lucid self (II)"
                                     }
                                 ]
                             },
@@ -181,15 +197,39 @@
                                 "tableOfContents":[
                                     {
                                         "key": "booknf11_3_1",
-                                        "title": "5 infinite energy"
+                                        "title": "5 infinite energy (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_3_1.1",
+                                        "title": "5 infinite energy (II)"
+                                    },
+                                    {
+                                        "key": "booknf11_3_1.2",
+                                        "title": "5 infinite energy (III)"
                                     },
                                     {
                                         "key": "booknf11_3_2",
-                                        "title": "6 the secrets of the spiritual heart"
+                                        "title": "6 the secrets of the spiritual heart (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_3_2.1",
+                                        "title": "6 the secrets of the spiritual heart (II)"
+                                    },
+                                    {
+                                        "key": "booknf11_3_2.2",
+                                        "title": "6 the secrets of the spiritual heart (III)"
                                     },
                                     {
                                         "key": "booknf11_3_3",
-                                        "title": "7 transcending the tendency to close"
+                                        "title": "7 transcending the tendency to close (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_3_3.1",
+                                        "title": "7 transcending the tendency to close (II)"
+                                    },
+                                    {
+                                        "key": "booknf11_3_3.2",
+                                        "title": "7 transcending the tendency to close (III)"
                                     }
                                 ]
                             },
@@ -199,19 +239,51 @@
                                 "tableOfContents":[
                                     {
                                         "key": "booknf11_4_1",
-                                        "title": "8 let go now or fall"
+                                        "title": "8 let go now or fall (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_4_1.1",
+                                        "title": "8 let go now or fall (II)"
+                                    },
+                                    {
+                                        "key": "booknf11_4_1.2",
+                                        "title": "8 let go now or fall (III)"
                                     },
                                     {
                                         "key": "booknf11_4_2",
-                                        "title": "9 removing your inner thorn"
+                                        "title": "9 removing your inner thorn (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_4_2.1",
+                                        "title": "9 removing your inner thorn (II)"
+                                    },
+                                    {
+                                        "key": "booknf11_4_2.2",
+                                        "title": "9 removing your inner thorn (III)"
                                     },
                                     {
                                         "key": "booknf11_4_3",
-                                        "title": "10 stealing freedom for your soul"
+                                        "title": "10 stealing freedom for your soul (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_4_3.1",
+                                        "title": "10 stealing freedom for your soul (II)"
+                                    },
+                                    {
+                                        "key": "booknf11_4_3.2",
+                                        "title": "10 stealing freedom for your soul (III)"
                                     },
                                     {
                                         "key": "booknf11_4_4",
-                                        "title": "11 pain, the price of freedom"
+                                        "title": "11 pain, the price of freedom (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_4_4.1",
+                                        "title": "11 pain, the price of freedom (II)"
+                                    },
+                                    {
+                                        "key": "booknf11_4_4.2",
+                                        "title": "11 pain, the price of freedom (III)"
                                     }
                                 ]
                             },
@@ -221,15 +293,31 @@
                                 "tableOfContents":[
                                     {
                                         "key": "booknf11_5_1",
-                                        "title": "12 taking down the walls"
+                                        "title": "12 taking down the walls (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_5_1.1",
+                                        "title": "12 taking down the walls (II)"
                                     },
                                     {
                                         "key": "booknf11_5_2",
-                                        "title": "13 far, far beyond"
+                                        "title": "13 far, far beyond (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_5_2.1",
+                                        "title": "13 far, far beyond (II)"
                                     },
                                     {
                                         "key": "booknf11_5_3",
-                                        "title": "14 letting go of false solidity"
+                                        "title": "14 letting go of false solidity (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_5_3.1",
+                                        "title": "14 letting go of false solidity (II)"
+                                    },
+                                    {
+                                        "key": "booknf11_5_3.2",
+                                        "title": "14 letting go of false solidity (III)"
                                     }
                                 ]
                             },
@@ -239,23 +327,43 @@
                                 "tableOfContents":[
                                     {
                                         "key": "booknf11_6_1",
-                                        "title": "15 the path of unconditional happiness"
+                                        "title": "15 the path of unconditional happiness (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_6_1.1",
+                                        "title": "15 the path of unconditional happiness (II)"
                                     },
                                     {
                                         "key": "booknf11_6_2",
-                                        "title": "16 the spiritual path of nonresistance"
+                                        "title": "16 the spiritual path of nonresistance (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_6_2.1",
+                                        "title": "16 the spiritual path of nonresistance (II)"
                                     },
                                     {
                                         "key": "booknf11_6_3",
-                                        "title": "17 contemplating death"
+                                        "title": "17 contemplating death (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_6_3.1",
+                                        "title": "17 contemplating death (II)"
                                     },
                                     {
                                         "key": "booknf11_6_4",
-                                        "title": "18 the secret of the middle way"
+                                        "title": "18 the secret of the middle way (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_6_4.1",
+                                        "title": "18 the secret of the middle way (II)"
                                     },
                                     {
                                         "key": "booknf11_6_5",
-                                        "title": "19 the loving eyes of god"
+                                        "title": "19 the loving eyes of god (I)"
+                                    },
+                                    {
+                                        "key": "booknf11_6_5.1",
+                                        "title": "19 the loving eyes of god (II)"
                                     }
                                 ]
                             },
@@ -322,114 +430,258 @@
                 "title": "The Shadow out of Time",
                 "tableOfContents": [
                     {
-                        "key": "bookf1_1",
-                        "title": "Chapter 1",
+                        "key": "bookf1_1_1",
+                        "title": "Chapter 1 (I)"
+                    },
+                    {
+                        "key": "bookf1_1_2",
+                        "title": "Chapter 1 (II)"
+                    },
+                    {
+                        "key": "bookf1_2_1",
+                        "title": "Chapter 2 (I)"
+                    },
+                    {
+                        "key": "bookf1_2_2",
+                        "title": "Chapter 2 (II)"
+                    },
+                    {
+                        "key": "bookf1_3_1",
+                        "title": "Chapter 3 (I)"
+                    },
+                    {
+                        "key": "bookf1_3_2",
+                        "title": "Chapter 3 (II)"
+                    },
+                    {
+                        "key": "bookf1_4_1",
+                        "title": "Chapter 4 (I)"
+                    },
+                    {
+                        "key": "bookf1_4_2",
+                        "title": "Chapter 4 (II)"
+                    },
+                    {
+                        "key": "bookf1_5_1",
+                        "title": "Chapter 5 (I)"
+                    },
+                    {
+                        "key": "bookf1_5_2",
+                        "title": "Chapter 5 (II)"
+                    },
+                    {
+                        "key": "bookf1_6_1",
+                        "title": "Chapter 6 (I)"
+                    },
+                    {
+                        "key": "bookf1_6_2",
+                        "title": "Chapter 6 (II)"
+                    },
+                    {
+                        "key": "bookf1_7_1",
+                        "title": "Chapter 7 (II)"
+                    },
+                    {
+                        "key": "bookf1_7_2",
+                        "title": "Chapter 7 (II)"
+                    },
+                    {
+                        "key": "bookf1_8_1",
+                        "title": "Chapter 8 (I)"
+                    },
+                    {
+                        "key": "bookf1_8_2",
+                        "title": "Chapter 8 (II)"
+                    }
+                ]
+            },
+            {
+                "key": "bookf2",
+                "title": "The Lock and Key Library: Classic Mystery and Detective Stories: Modern English",
+                "tableOfContents": [
+                    {
+                        "key": "bookf2_1",
+                        "title": "Rudyard Kipling",
                         "tableOfContents":[
                             {
-                                "key": "bookf1_1_1",
-                                "title": "Part 1 of Chapter 1"
+                                "key": "bookf2_1_1",
+                                "title": "My Own True Ghost Story (I)"
                             },
                             {
-                                "key": "bookf1_1_2",
-                                "title": "Part 2 of Chapter 1"
+                                "key": "bookf2_1_11",
+                                "title": "My Own True Ghost Story (II)"
+                            },
+                            {
+                                "key": "bookf2_1_2",
+                                "title": "The Sending of Dana Da (I)"
+                            },
+                            {
+                                "key": "bookf2_1_21",
+                                "title": "The Sending of Dana Da (II)"
+                            },
+                            {
+                                "key": "bookf2_1_3",
+                                "title": "In the House of Suddhoo (I)"
+                            },
+                            {
+                                "key": "bookf2_1_31",
+                                "title": "In the House of Suddhoo (II)"
+                            },
+                            {
+                                "key": "bookf2_1_4",
+                                "title": "His Wedded Wife"
                             }
                         ]
                     },
                     {
-                        "key": "bookf1_2",
-                        "title": "Chapter 2",
+                        "key": "bookf2_2",
+                        "title": "A. Conan Doyle",
                         "tableOfContents":[
                             {
-                                "key": "bookf1_2_1",
-                                "title": "Part 1 of Chapter 2"
+                                "key": "bookf2_2_1",
+                                "title": "A Case of Identity",
+                                "tableOfContents":[
+                                    {
+                                        "key": "bookf2_2_1_1",
+                                        "title": "A Case of Identity (I)"
+                                    },
+                                    {
+                                        "key": "bookf2_2_1_2",
+                                        "title": "A Case of Identity (II)"
+                                    },
+                                    {
+                                        "key": "bookf2_2_1_3",
+                                        "title": "A Case of Identity (III)"
+                                    },
+                                    {
+                                        "key": "bookf2_2_1_4",
+                                        "title": "A Case of Identity (IV)"
+                                    }
+                                ]
                             },
                             {
-                                "key": "bookf1_2_2",
-                                "title": "Part 2 of Chapter 2"
+                                "key": "bookf2_2_2",
+                                "title": "A Scandal in Bohemia",
+                                "tableOfContents":[
+                                    {
+                                        "key": "bookf2_2_2_1",
+                                        "title": "A Scandal in Bohemia (I)"
+                                    },
+                                    {
+                                        "key": "bookf2_2_2_2",
+                                        "title": "A Scandal in Bohemia (II)"
+                                    },
+                                    {
+                                        "key": "bookf2_2_2_3",
+                                        "title": "A Scandal in Bohemia (III)"
+                                    },
+                                    {
+                                        "key": "bookf2_2_2_4",
+                                        "title": "A Scandal in Bohemia (IV)"
+                                    },
+                                    {
+                                        "key": "bookf2_2_2_5",
+                                        "title": "A Scandal in Bohemia (V)"
+                                    },
+                                    {
+                                        "key": "bookf2_2_2_6",
+                                        "title": "A Scandal in Bohemia (VI)"
+                                    },
+                                    {
+                                        "key": "bookf2_2_2_7",
+                                        "title": "A Scandal in Bohemia (VII)"
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "bookf2_2_3",
+                                "title": "The Red-Headed League",
+                                "tableOfContents":[
+                                    {
+                                        "key": "bookf2_2_3_1",
+                                        "title": "The Red-Headed League (I)"
+                                    },
+                                    {
+                                        "key": "bookf2_2_3_2",
+                                        "title": "The Red-Headed League (II)"
+                                    },
+                                    {
+                                        "key": "bookf2_2_3_3",
+                                        "title": "The Red-Headed League (III)"
+                                    },
+                                    {
+                                        "key": "bookf2_2_3_4",
+                                        "title": "The Red-Headed League (IV)"
+                                    },
+                                    {
+                                        "key": "bookf2_2_3_5",
+                                        "title": "The Red-Headed League (V)"
+                                    },
+                                    {
+                                        "key": "bookf2_2_3_6",
+                                        "title": "The Red-Headed League (VI)"
+                                    }
+                                ]
                             }
                         ]
                     },
                     {
-                        "key": "bookf1_3",
-                        "title": "Chapter 3",
+                        "key": "bookf2_3",
+                        "title": "Egerton Castle",
                         "tableOfContents":[
                             {
-                                "key": "bookf1_3_1",
-                                "title": "Part 1 of Chapter 3"
-                            },
-                            {
-                                "key": "bookf1_3_2",
-                                "title": "Part 2 of Chapter 3"
+                                "key": "bookf2_3_1",
+                                "title": "The Baron's Quarry",
+                                "tableOfContents":[
+                                    {
+                                        "key": "bookf2_3_1_1",
+                                        "title": "The Baron's Quarry (I)"
+                                    },
+                                    {
+                                        "key": "bookf2_3_1_2",
+                                        "title": "The Baron's Quarry (II)"
+                                    },
+                                    {
+                                        "key": "bookf2_3_1_3",
+                                        "title": "The Baron's Quarry (III)"
+                                    },
+                                    {
+                                        "key": "bookf2_3_1_4",
+                                        "title": "The Baron's Quarry (IV)"
+                                    },
+                                    {
+                                        "key": "bookf2_3_1_5",
+                                        "title": "The Baron's Quarry (V)"
+                                    }
+                                ]
                             }
                         ]
                     },
                     {
-                        "key": "bookf1_4",
-                        "title": "Chapter 4",
+                        "key": "bookf2_4",
+                        "title": "Stanley J. Weyman",
                         "tableOfContents":[
                             {
-                                "key": "bookf1_4_1",
-                                "title": "Part 1 of Chapter 4"
-                            },
-                            {
-                                "key": "bookf1_4_2",
-                                "title": "Part 2 of Chapter 4"
-                            }
-                        ]
-                    },
-                    {
-                        "key": "bookf1_5",
-                        "title": "Chapter 5",
-                        "tableOfContents":[
-                            {
-                                "key": "bookf1_5_1",
-                                "title": "Part 1 of Chapter 5"
-                            },
-                            {
-                                "key": "bookf1_5_2",
-                                "title": "Part 2 of Chapter 5"
-                            }
-                        ]
-                    },
-                    {
-                        "key": "bookf1_6",
-                        "title": "Chapter 6",
-                        "tableOfContents":[
-                            {
-                                "key": "bookf1_6_1",
-                                "title": "Part 1  of Chapter 6"
-                            },
-                            {
-                                "key": "bookf1_6_2",
-                                "title": "Part 2 of Chapter 6"
-                            }
-                        ]
-                    },
-                    {
-                        "key": "bookf1_7",
-                        "title": "Chapter 7",
-                        "tableOfContents":[
-                            {
-                                "key": "bookf1_7_1",
-                                "title": "Part 1  of Chapter 7"
-                            },
-                            {
-                                "key": "bookf1_7_2",
-                                "title": "Part 2 of Chapter 7"
-                            }
-                        ]
-                    },
-                    {
-                        "key": "bookf1_8",
-                        "title": "Chapter 8",
-                        "tableOfContents":[
-                            {
-                                "key": "bookf1_8_1",
-                                "title": "Part 1  of Chapter 8"
-                            },
-                            {
-                                "key": "bookf1_8_2",
-                                "title": "Part 2 of Chapter 8"
+                                "key": "bookf2_4_1",
+                                "title": "The Fowl in the Pot",
+                                "tableOfContents": [
+                                    {
+                                        "key": "bookf2_4_1_1",
+                                        "title": "The Fowl in the Pot (I)"
+                                    },
+                                    {
+                                        "key": "bookf2_4_1_2",
+                                        "title": "The Fowl in the Pot (II)"
+                                    },
+                                    {
+                                        "key": "bookf2_4_1_3",
+                                        "title": "The Fowl in the Pot (III)"
+                                    },
+                                    {
+                                        "key": "bookf2_4_1_4",
+                                        "title": "The Fowl in the Pot (IV)"
+                                    }
+                                ]
                             }
                         ]
                     }
