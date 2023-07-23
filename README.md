@@ -53,9 +53,9 @@ fyne package -os android -appID com.example.myapp -icon mobileIcon.png
 fyne package -os ios -appID com.example.myapp -icon mobileIcon.png
 ```
 
-### How to add more books to app
+### About articles_index.json file and how to add more books to the app
 
-A book consists of chapters, and each chapter may contain some parts
+A book may fall into a category and consists of a number of chapters. The text in each chapter should be saved in a text file or multiple files under `internal/articles/assets` directory. The json structure in `internal/articles/assets/articles_index.json` file explain the Hierarchy of categories and books.
 
 For example:
 
@@ -74,13 +74,29 @@ For example:
  ]
 ```
 
-A key's value must be unique in the `articles_index.json` file, if there is no `tableOfContents` key in a json object, then the json object's structure is `{key, title}`, then this json object depicts a file whose name is key's value, such as if key's value is `chapter2Key`, the file `chapter2Key.txt` that contains the content of the chapter should be saved under `internal/articles/assets` folder.
+The json object in the `articles_index.json` file has the structure of `{key, title, TableOfContents}`. An object can represent a category, a book or a chapter in a book. A key's value must be unique for each object.
+
+If there is a `tableOfContents` key in a json object, it means the object depicts a category or a book that contains some content which could be some chapters for a book, or books for a categories stored in the `tableOfContents`.
+
+If there is no `tableOfContents` key in a json object, then the json object's structure is `{key, title}`, so this json object normally is a chapter in a book, and the text is saved a file. For instance, if key's value is `chapter2Key`, the file `chapter2Key.txt` that contains the content of the chapter should be saved under `internal/articles/assets` folder.
+
+If a user wants to add more books, he or she just adds a json object for the book to the corresponding category object's `tableOfContents` value, vice versa when user wants to remove an e-book, the user can delete the json object from `tableOfContents` value. The same rule applies to adding and removing the categories and chapter etc.
+
+## demo
+
+- mobile version
+
+![demo](internal/images/demo-ebook.gif)
+
+- desktop version
+
+![demo](internal/images/demo-ebook-desktop.gif)
 
 ## app screenshots
 
-![navigation](internal/screenShot/mainNavi.png)
-![setting part](internal/screenShot/mainMenu.png)
-![one category](internal/screenShot/aCategory.png)
-![category list](internal/screenShot/chapterList.png)
-![article content](internal/screenShot/content.png)
-![higher category](internal/screenShot/directoryAboveChapter.png)
+![navigation](internal/images/mainNavi.png)
+![setting part](internal/images/mainMenu.png)
+![one category](internal/images/aCategory.png)
+![category list](internal/images/chapterList.png)
+![article content](internal/images/content.png)
+![higher category](internal/images/directoryAboveChapter.png)
