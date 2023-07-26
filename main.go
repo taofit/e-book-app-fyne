@@ -108,9 +108,9 @@ func main() {
 	w.ShowAndRun()
 }
 
-func makeTopBar(titleName string) *widget.Label {
+func makeTopBar(titleName string) *fyne.Container {
 	topBar := widget.NewLabel(titleName)
-	topBar.Alignment = fyne.TextAlignCenter
+	topBarCtn := container.NewCenter(topBar)
 
-	return topBar
+	return topBarCtn
 }
