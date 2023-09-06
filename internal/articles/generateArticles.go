@@ -70,7 +70,7 @@ func loadArticles() []Subject {
 		log.Printf("Could not load json file: %s\n", err)
 		return []Subject{}
 	}
-	err = json.Unmarshal([]byte(jsonArticleList), &subjects)
+	err = json.Unmarshal(jsonArticleList, &subjects)
 
 	if err != nil {
 		log.Printf("Could not unmarshal json: %s\n", err)
